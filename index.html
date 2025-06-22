@@ -5,27 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Premium Grow A Garden Services</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Quicksand:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
       :root {
         --primary: #2e7d32;
         --primary-dark: #1b5e20;
         --primary-light: #4caf50;
         --accent: #ffab00;
-        --accent-dark: #ff8f00;
         --dark-bg: #0d1f0f;
         --card-bg: #1a2c1d;
         --text: #e0f7e0;
         --text-light: #a5d6a7;
-        --success: #66bb6a;
-        --warning: #ffca28;
       }
 
       * {
         margin: 0;
         padding: 0;
         box-sizing: border-box;
-        font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-family: 'Poppins', sans-serif;
       }
 
       body {
@@ -39,25 +36,10 @@
         font-size: 16px;
       }
 
-      body::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background:
-          radial-gradient(circle at 10% 20%, rgba(46, 125, 50, 0.1) 0%, transparent 20%),
-          radial-gradient(circle at 90% 80%, rgba(76, 175, 80, 0.1) 0%, transparent 20%),
-          radial-gradient(circle at 30% 60%, rgba(30, 70, 32, 0.1) 0%, transparent 30%);
-        pointer-events: none;
-        z-index: -1;
-      }
-
       .container {
         max-width: 1200px;
         margin: 0 auto;
-        padding: 0 15px;
+        padding: 0 20px;
       }
 
       header {
@@ -87,7 +69,6 @@
       .logo-icon {
         font-size: 2rem;
         color: var(--primary-light);
-        text-shadow: 0 0 10px rgba(76, 175, 80, 0.5);
       }
 
       .logo h1 {
@@ -97,14 +78,11 @@
         background-clip: text;
         color: transparent;
         font-weight: 700;
-        font-family: 'Quicksand', sans-serif;
-        letter-spacing: 0.5px;
       }
 
       .tagline {
         color: var(--text-light);
         font-size: 0.95rem;
-        margin-top: 3px;
         text-align: center;
       }
 
@@ -131,12 +109,41 @@
         background: rgba(76, 175, 80, 0.3);
       }
 
+      .hero {
+        text-align: center;
+        padding: 50px 0 30px;
+        max-width: 800px;
+        margin: 0 auto;
+      }
+
+      .hero-icon {
+        font-size: 3.5rem;
+        color: var(--primary-light);
+        margin-bottom: 20px;
+      }
+
+      .hero h1 {
+        font-size: 2.2rem;
+        margin-bottom: 15px;
+        background: linear-gradient(to right, var(--primary-light), var(--accent));
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        font-weight: 700;
+      }
+
+      .hero p {
+        font-size: 1.2rem;
+        color: var(--text-light);
+        margin-bottom: 30px;
+        line-height: 1.7;
+      }
+
       .section-title {
         text-align: center;
-        margin: 30px 0 20px;
+        margin: 40px 0 20px;
         position: relative;
         font-size: 1.8rem;
-        font-family: 'Quicksand', sans-serif;
         font-weight: 700;
       }
 
@@ -157,7 +164,6 @@
         color: var(--text-light);
         font-size: 1rem;
         line-height: 1.6;
-        padding: 0 15px;
       }
 
       .cards-container {
@@ -173,7 +179,6 @@
         overflow: hidden;
         transition: all 0.3s ease;
         border: 1px solid rgba(76, 175, 80, 0.3);
-        position: relative;
         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
       }
 
@@ -188,19 +193,6 @@
         padding: 20px;
         text-align: center;
         border-bottom: 1px solid rgba(76, 175, 80, 0.3);
-        position: relative;
-        overflow: hidden;
-      }
-
-      .card-header::before {
-        content: "";
-        position: absolute;
-        top: -50%;
-        left: -50%;
-        width: 200%;
-        height: 200%;
-        background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
-        transform: rotate(30deg);
       }
 
       .card-title {
@@ -208,7 +200,6 @@
         font-weight: 600;
         color: white;
         margin-bottom: 5px;
-        position: relative;
       }
 
       .card-price {
@@ -216,8 +207,6 @@
         font-weight: 700;
         color: var(--accent);
         margin: 10px 0;
-        text-shadow: 0 0 8px rgba(255, 171, 0, 0.3);
-        position: relative;
       }
 
       .card-price s {
@@ -251,18 +240,12 @@
         padding: 8px 0;
         display: flex;
         align-items: flex-start;
-        border-bottom: 1px dashed rgba(165, 214, 167, 0.2);
         font-size: 0.95rem;
-      }
-
-      .features li:last-child {
-        border-bottom: none;
       }
 
       .features li i {
         color: var(--primary-light);
         margin-right: 10px;
-        margin-top: 4px;
         font-size: 1rem;
         min-width: 20px;
       }
@@ -287,7 +270,6 @@
         border-radius: 8px;
         color: white;
         font-size: 1rem;
-        transition: all 0.3s ease;
       }
 
       .form-input:focus {
@@ -296,399 +278,266 @@
         box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.2);
       }
 
-      .form-select {
-        width: 100%;
-        padding: 12px 15px;
+      .payment-info {
         background: rgba(13, 31, 15, 0.5);
-        border: 1px solid rgba(76, 175, 80, 0.3);
         border-radius: 8px;
+        padding: 15px;
+        margin-top: 15px;
+        border: 1px solid rgba(76, 175, 80, 0.3);
+        text-align: center;
+      }
+
+      .cashapp-tag {
+        display: inline-block;
+        background: rgba(0, 123, 255, 0.2);
+        padding: 5px 15px;
+        border-radius: 20px;
+        font-weight: 600;
+        margin-top: 5px;
+        border: 1px solid rgba(0, 123, 255, 0.4);
+      }
+
+      .btn {
+        display: block;
+        width: 100%;
+        padding: 14px;
+        background: linear-gradient(to right, var(--primary), var(--primary-dark));
         color: white;
-        font-size: 1rem;
-        appearance: none;
-        background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg
-xmlns='http://www.w3.org/2000/svg'viewBox='0 0 24 24'fill='none'stroke='%234caf50'stroke-width='2'stroke-linecap='round'stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
-background-repeat: no-repeat;
-            background-position: right 15px center;
-            background-size: 16px;
-        }
+        border: none;
+        border-radius: 8px;
+        font-size: 1.1rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        text-align: center;
+        margin-top: 15px;
+      }
 
-        .form-select:focus {
-          outline: none;
-          border-color: var(--primary-light);
-          box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.2);
-        }
+      .btn:hover {
+        background: linear-gradient(to right, var(--primary-dark), #124a15);
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(46, 125, 50, 0.4);
+      }
 
-        .payment-methods {
-          display: flex;
-          flex-direction: column;
-          gap: 10px;
-          margin: 15px 0;
-        }
+      .btn i {
+        margin-right: 8px;
+      }
 
-        .payment-method {
-          padding: 12px;
-          border: 2px solid rgba(76, 175, 80, 0.3);
-          border-radius: 8px;
-          cursor: pointer;
-          transition: all 0.3s ease;
-          text-align: center;
-          background: rgba(13, 31, 15, 0.3);
-        }
+      .pets-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
 
-        .payment-method.active {
-          border-color: var(--accent);
-          background: rgba(255, 171, 0, 0.1);
-        }
+      .pet-card {
+        background: var(--card-bg);
+        border-radius: 12px;
+        overflow: hidden;
+        transition: all 0.3s ease;
+        border: 1px solid rgba(76, 175, 80, 0.3);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+      }
 
-        .payment-method i {
-          font-size: 1.8rem;
-          margin-bottom: 8px;
-          color: var(--primary-light);
-        }
+      .pet-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+        border-color: var(--primary-light);
+      }
 
-        .payment-method.active i {
-          color: var(--accent);
-        }
+      .pet-image {
+        height: 160px;
+        background: linear-gradient(45deg, #1b5e20, #2e7d32, #4caf50);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 3.5rem;
+        color: white;
+      }
 
-        .payment-details {
-          background: rgba(13, 31, 15, 0.5);
-          border-radius: 8px;
-          padding: 15px;
-          margin-top: 10px;
-          border: 1px solid rgba(76, 175, 80, 0.3);
-          display: none;
-          font-size: 0.95rem;
-        }
+      .pet-details {
+        padding: 20px;
+      }
 
-        .payment-details.active {
-          display: block;
-        }
+      .pet-name {
+        font-size: 1.3rem;
+        font-weight: 600;
+        margin-bottom: 8px;
+        color: white;
+      }
 
-        .btn {
-          display: block;
-          width: 100%;
-          padding: 14px;
-          background: linear-gradient(to right, var(--primary), var(--primary-dark));
-          color: white;
-          border: none;
-          border-radius: 8px;
-          font-size: 1.1rem;
-          font-weight: 600;
-          cursor: pointer;
-          transition: all 0.3s ease;
-          text-align: center;
-          text-decoration: none;
-          margin-top: 15px;
-          position: relative;
-          overflow: hidden;
-        }
+      .pet-price {
+        font-size: 1.7rem;
+        color: var(--accent);
+        font-weight: 700;
+        margin: 12px 0;
+      }
 
-        .btn:hover {
-          background: linear-gradient(to right, var(--primary-dark), #124a15);
-          transform: translateY(-2px);
-          box-shadow: 0 5px 15px rgba(46, 125, 50, 0.4);
-        }
+      .section-divider {
+        height: 1px;
+        background: linear-gradient(to right, transparent, rgba(76, 175, 80, 0.4), transparent);
+        margin: 50px 0;
+        position: relative;
+      }
 
-        .btn i {
-          margin-right: 8px;
-        }
+      .section-divider::before,
+      .section-divider::after {
+        content: "✿";
+        position: absolute;
+        top: -12px;
+        color: var(--primary-light);
+        font-size: 1.3rem;
+      }
 
+      .section-divider::before {
+        left: 15%;
+      }
+
+      .section-divider::after {
+        right: 15%;
+      }
+
+      .service-overview {
+        max-width: 900px;
+        margin: 40px auto;
+        background: var(--card-bg);
+        padding: 30px;
+        border-radius: 12px;
+        border: 1px solid rgba(76, 175, 80, 0.3);
+        border-left: 4px solid var(--accent);
+      }
+
+      .service-overview h3 {
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+        color: var(--primary-light);
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+
+      .service-overview h3 i {
+        font-size: 1.8rem;
+        color: var(--accent);
+      }
+
+      .slogan {
+        text-align: center;
+        font-size: 1.3rem;
+        margin-top: 30px;
+        color: var(--accent);
+        font-weight: 600;
+        font-style: italic;
+      }
+
+      .important-notes {
+        max-width: 900px;
+        margin: 40px auto;
+        background: var(--card-bg);
+        padding: 30px;
+        border-radius: 12px;
+        border: 1px solid rgba(76, 175, 80, 0.3);
+        border-left: 4px solid var(--accent);
+      }
+
+      .important-notes h3 {
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+        color: var(--primary-light);
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+
+      .important-notes ul {
+        list-style-type: none;
+        margin-left: 20px;
+      }
+
+      .important-notes li {
+        margin-bottom: 10px;
+        padding-left: 25px;
+        position: relative;
+      }
+
+      .important-notes li:before {
+        content: "•";
+        color: var(--primary-light);
+        font-size: 1.5rem;
+        position: absolute;
+        left: 0;
+        top: -5px;
+      }
+
+      footer {
+        text-align: center;
+        margin-top: 50px;
+        color: var(--text-light);
+        font-size: 0.9rem;
+        padding: 25px 0;
+        border-top: 1px solid rgba(76, 175, 80, 0.2);
+      }
+
+      .support {
+        color: var(--primary-light);
+        text-decoration: none;
+        font-weight: 500;
+        transition: all 0.3s ease;
+      }
+
+      .support:hover {
+        color: var(--accent);
+        text-decoration: underline;
+      }
+
+      @media (min-width: 576px) {
+
+        .cards-container,
         .pets-container {
-          display: grid;
           grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-          gap: 20px;
+          gap: 25px;
         }
 
-        .pet-card {
-          background: var(--card-bg);
-          border-radius: 12px;
-          overflow: hidden;
-          transition: all 0.3s ease;
-          border: 1px solid rgba(76, 175, 80, 0.3);
-          position: relative;
-          box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-        }
-
-        .pet-card:hover {
-          transform: translateY(-5px);
-          box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
-          border-color: var(--primary-light);
-        }
-
-        .pet-image {
-          height: 160px;
-          background: linear-gradient(45deg, #1b5e20, #2e7d32, #4caf50);
-          display: flex;
+        .header-content {
+          flex-direction: row;
+          justify-content: space-between;
           align-items: center;
-          justify-content: center;
-          font-size: 3.5rem;
-          color: white;
-          position: relative;
-          overflow: hidden;
-        }
-
-        .pet-details {
-          padding: 20px;
-        }
-
-        .pet-name {
-          font-size: 1.3rem;
-          font-weight: 600;
-          margin-bottom: 8px;
-          color: white;
-        }
-
-        .pet-price {
-          font-size: 1.7rem;
-          color: var(--accent);
-          font-weight: 700;
-          margin: 12px 0;
-          text-shadow: 0 0 8px rgba(255, 171, 0, 0.3);
-        }
-
-        .section-divider {
-          height: 1px;
-          background: linear-gradient(to right, transparent, rgba(76, 175, 80, 0.4), transparent);
-          margin: 50px 0;
-          position: relative;
-        }
-
-        .section-divider::before,
-        .section-divider::after {
-          content: "✿";
-          position: absolute;
-          top: -12px;
-          color: var(--primary-light);
-          font-size: 1.3rem;
         }
 
         .section-divider::before {
-          left: 15%;
+          left: 25%;
         }
 
         .section-divider::after {
-          right: 15%;
+          right: 25%;
         }
 
-        .important-notes {
-          max-width: 900px;
-          margin: 40px auto;
-          background: var(--card-bg);
-          padding: 30px;
-          border-radius: 12px;
-          border: 1px solid rgba(76, 175, 80, 0.3);
-          position: relative;
-          box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-          border-left: 4px solid var(--accent);
+        .hero {
+          padding: 70px 0 40px;
+        }
+      }
+
+      @media (min-width: 768px) {
+        .section-title {
+          margin: 40px 0 25px;
+          font-size: 2.2rem;
         }
 
-        .important-notes h3 {
-          font-size: 1.5rem;
-          margin-bottom: 20px;
-          color: var(--primary-light);
-          display: flex;
-          align-items: center;
-          gap: 12px;
+        .card-header,
+        .pet-image {
+          padding: 25px;
         }
 
-        .important-notes h3 i {
-          font-size: 1.8rem;
-          color: var(--accent);
+        .section-divider::before {
+          left: 30%;
         }
 
-        .important-notes p {
-          margin-bottom: 15px;
-          line-height: 1.7;
-          font-size: 1rem;
+        .section-divider::after {
+          right: 30%;
         }
-
-        .slogan {
-          text-align: center;
-          font-size: 1.3rem;
-          margin-top: 30px;
-          color: var(--accent);
-          font-weight: 600;
-          font-style: italic;
-          text-shadow: 0 0 8px rgba(255, 171, 0, 0.3);
-        }
-
-        footer {
-          text-align: center;
-          margin-top: 50px;
-          color: var(--text-light);
-          font-size: 0.9rem;
-          padding: 25px 0;
-          border-top: 1px solid rgba(76, 175, 80, 0.2);
-        }
-
-        .support {
-          color: var(--primary-light);
-          text-decoration: none;
-          font-weight: 500;
-          transition: all 0.3s ease;
-          display: inline-block;
-          margin-top: 5px;
-        }
-
-        .support:hover {
-          color: var(--accent);
-          text-decoration: underline;
-        }
-
-        .decoration {
-          position: absolute;
-          z-index: -1;
-          opacity: 0.15;
-        }
-
-        .leaf-1 {
-          top: 10%;
-          left: 3%;
-          font-size: 6rem;
-          transform: rotate(-30deg);
-          color: var(--primary-light);
-        }
-
-        .leaf-2 {
-          bottom: 15%;
-          right: 3%;
-          font-size: 8rem;
-          transform: rotate(20deg);
-          color: var(--primary-light);
-        }
-
-        .flower {
-          top: 35%;
-          right: 5%;
-          font-size: 5rem;
-          color: var(--accent);
-          transform: rotate(15deg);
-        }
-
-        /* Mobile menu toggle */
-        .menu-toggle {
-          display: none;
-          background: transparent;
-          border: none;
-          color: var(--text-light);
-          font-size: 1.8rem;
-          cursor: pointer;
-          position: absolute;
-          top: 15px;
-          right: 15px;
-          z-index: 101;
-        }
-
-        /* Media Queries for larger screens */
-        @media (min-width: 576px) {
-          .cards-container {
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 25px;
-          }
-
-          .payment-methods {
-            flex-direction: row;
-            gap: 10px;
-          }
-
-          .section-title {
-            font-size: 2rem;
-          }
-
-          .header-content {
-            flex-direction: row;
-            justify-content: space-between;
-            align-items: center;
-          }
-
-          .logo h1 {
-            font-size: 2rem;
-          }
-
-          .nav-links {
-            gap: 15px;
-          }
-
-          .section-divider::before {
-            left: 25%;
-          }
-
-          .section-divider::after {
-            right: 25%;
-          }
-        }
-
-        @media (min-width: 768px) {
-          .container {
-            padding: 0 20px;
-          }
-
-          .section-title {
-            margin: 40px 0 25px;
-            font-size: 2.2rem;
-          }
-
-          .section-subtitle {
-            font-size: 1.1rem;
-          }
-
-          .card-header {
-            padding: 25px;
-          }
-
-          .card-title {
-            font-size: 1.5rem;
-          }
-
-          .card-price {
-            font-size: 2.2rem;
-          }
-
-          .pet-image {
-            height: 180px;
-            font-size: 4rem;
-          }
-
-          .pet-name {
-            font-size: 1.4rem;
-          }
-
-          .pet-price {
-            font-size: 1.8rem;
-          }
-
-          .section-divider::before {
-            left: 30%;
-          }
-
-          .section-divider::after {
-            right: 30%;
-          }
-        }
-
-        @media (min-width: 992px) {
-          .cards-container {
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-          }
-
-          .section-divider::before {
-            left: 35%;
-          }
-
-          .section-divider::after {
-            right: 35%;
-          }
-
-          .leaf-1, .leaf-2, .flower {
-            opacity: 0.25;
-          }
-        }
+      }
     </style>
   </head>
   <body>
-    <i class="fas fa-leaf decoration leaf-1"></i>
-    <i class="fas fa-leaf decoration leaf-2"></i>
-    <i class="fas fa-spa decoration flower"></i>
     <header>
       <div class="container">
         <div class="header-content">
@@ -697,22 +546,29 @@ background-repeat: no-repeat;
               <i class="fas fa-seedling"></i>
             </div>
             <div>
-              <h1>Garden Services</h1>
-              <div class="tagline">Premium automation for Grow A Garden</div>
+              <h1>Grow A Garden</h1>
+              <div class="tagline">Premium Automation Services</div>
             </div>
           </div>
           <div class="nav-links">
             <a href="#grinding-service" class="nav-link">Auto-Grinding</a>
             <a href="#pet-shop" class="nav-link">Pet Shop</a>
-            <a href="#" class="nav-link">Support</a>
+            <a href="#overview" class="nav-link">Overview</a>
           </div>
         </div>
       </div>
     </header>
     <div class="container">
+      <section class="hero">
+        <div class="hero-icon">
+          <i class="fas fa-leaf"></i>
+        </div>
+        <h1>Premium Grow A Garden Auto-Grinding Service</h1>
+        <p>Maximize your in-game efficiency with our hands-free solution – the most affordable auto-grinding on the market!</p>
+      </section>
       <section id="grinding-service">
-        <h2 class="section-title">🌱 Auto-Grinding Service</h2>
-        <p class="section-subtitle"> Maximize your in-game efficiency with our hands-free solution - non-stop grinding until subscription ends! </p>
+        <h2 class="section-title">Service Packages & Pricing</h2>
+        <p class="section-subtitle">Choose the plan that fits your goals</p>
         <div class="cards-container">
           <div class="card">
             <div class="card-header">
@@ -722,49 +578,27 @@ background-repeat: no-repeat;
             <div class="card-body">
               <ul class="features">
                 <li>
-                  <i class="fas fa-check-circle"></i> Auto Purchase Seeds
+                  <i class="fas fa-check-circle"></i> Automated seed purchases
                 </li>
                 <li>
-                  <i class="fas fa-check-circle"></i> Auto purchase Gears
+                  <i class="fas fa-check-circle"></i> Gear and cosmetic acquisition
                 </li>
                 <li>
-                  <i class="fas fa-check-circle"></i> Auto Purchase Cosmetics
+                  <i class="fas fa-check-circle"></i> Auto Buy Eggs
                 </li>
                 <li>
-                  <i class="fas fa-check-circle"></i> Auto Purchase Eggs
-                </li>
-                <li>
-                  <i class="fas fa-check-circle"></i> Auto Plant Seeds
-                </li>
-                <li>
-                  <i class="fas fa-check-circle"></i> Stack Plants efficiently
-                </li>
-                <li>
-                  <i class="fas fa-check-circle"></i> Non-stop grinding
+                  <i class="fas fa-check-circle"></i> Customizable tasks
                 </li>
               </ul>
               <div class="form-group">
                 <label class="form-label">Roblox Username</label>
-                <input type="text" class="form-input" id="username-1day" placeholder="Enter your username">
+                <input type="text" class="form-input" id="username-1day" placeholder="Enter your Roblox username" required>
               </div>
-              <div class="payment-methods">
-                <div class="payment-method active" onclick="selectPaymentMethod(this, 'cashapp')">
-                  <i class="fas fa-dollar-sign"></i>
-                  <div>Cash App</div>
-                </div>
-                <div class="payment-method" onclick="selectPaymentMethod(this, 'realcash')">
-                  <i class="fas fa-money-bill-wave"></i>
-                  <div>Real Cash</div>
-                </div>
+              <div class="payment-info">
+                <p>Send payment via Cash App to:</p>
+                <div class="cashapp-tag">$darkturns</div>
               </div>
-              <div class="payment-details active" id="cashapp-details-1day">
-                <p>Send payment via Cash App to: <strong>$darkturns</strong>
-                </p>
-              </div>
-              <div class="payment-details" id="realcash-details-1day">
-                <p>Contact us via Discord to arrange payment.</p>
-              </div>
-              <button class="btn" onclick="purchaseService('1 Day Plan', 1.59, 'username-1day', 'cashapp-details-1day', 'realcash-details-1day')">
+              <button class="btn" onclick="purchaseService('1 Day Plan', 1.59, 'username-1day')">
                 <i class="fas fa-shopping-cart"></i> Purchase Now </button>
             </div>
           </div>
@@ -776,49 +610,27 @@ background-repeat: no-repeat;
             <div class="card-body">
               <ul class="features">
                 <li>
-                  <i class="fas fa-check-circle"></i> Auto Purchase Seeds
+                  <i class="fas fa-check-circle"></i> Automated seed purchases
                 </li>
                 <li>
-                  <i class="fas fa-check-circle"></i> Auto purchase Gears
+                  <i class="fas fa-check-circle"></i> Gear and cosmetic acquisition
                 </li>
                 <li>
-                  <i class="fas fa-check-circle"></i> Auto Purchase Cosmetics
+                  <i class="fas fa-check-circle"></i> Auto Buy Eggs
                 </li>
                 <li>
-                  <i class="fas fa-check-circle"></i> Auto Purchase Eggs
-                </li>
-                <li>
-                  <i class="fas fa-check-circle"></i> Auto Plant Seeds
-                </li>
-                <li>
-                  <i class="fas fa-check-circle"></i> Stack Plants efficiently
-                </li>
-                <li>
-                  <i class="fas fa-check-circle"></i> Non-stop grinding
+                  <i class="fas fa-check-circle"></i> Customizable tasks
                 </li>
               </ul>
               <div class="form-group">
                 <label class="form-label">Roblox Username</label>
-                <input type="text" class="form-input" id="username-7day" placeholder="Enter your username">
+                <input type="text" class="form-input" id="username-7day" placeholder="Enter your Roblox username" required>
               </div>
-              <div class="payment-methods">
-                <div class="payment-method active" onclick="selectPaymentMethod(this, 'cashapp')">
-                  <i class="fas fa-dollar-sign"></i>
-                  <div>Cash App</div>
-                </div>
-                <div class="payment-method" onclick="selectPaymentMethod(this, 'realcash')">
-                  <i class="fas fa-money-bill-wave"></i>
-                  <div>Real Cash</div>
-                </div>
+              <div class="payment-info">
+                <p>Send payment via Cash App to:</p>
+                <div class="cashapp-tag">$darkturns</div>
               </div>
-              <div class="payment-details active" id="cashapp-details-7day">
-                <p>Send payment via Cash App to: <strong>$darkturns</strong>
-                </p>
-              </div>
-              <div class="payment-details" id="realcash-details-7day">
-                <p>Contact us via Discord to arrange payment.</p>
-              </div>
-              <button class="btn" onclick="purchaseService('7 Day Plan', 3.59, 'username-7day', 'cashapp-details-7day', 'realcash-details-7day')">
+              <button class="btn" onclick="purchaseService('7 Day Plan', 3.59, 'username-7day')">
                 <i class="fas fa-shopping-cart"></i> Purchase Now </button>
             </div>
           </div>
@@ -828,54 +640,32 @@ background-repeat: no-repeat;
               <div class="card-price">
                 <s>$12.99</s> $6.99
               </div>
-              <div class="highlight">New User: 50% Off</div>
+              <div class="highlight">New User Exclusive: 50% Off</div>
             </div>
             <div class="card-body">
               <ul class="features">
                 <li>
-                  <i class="fas fa-check-circle"></i> Auto Purchase Seeds
+                  <i class="fas fa-check-circle"></i> Automated seed purchases
                 </li>
                 <li>
-                  <i class="fas fa-check-circle"></i> Auto purchase Gears
+                  <i class="fas fa-check-circle"></i> Gear and cosmetic acquisition
                 </li>
                 <li>
-                  <i class="fas fa-check-circle"></i> Auto Purchase Cosmetics
+                  <i class="fas fa-check-circle"></i> Auto Buy Eggs
                 </li>
                 <li>
-                  <i class="fas fa-check-circle"></i> Auto Purchase Eggs
-                </li>
-                <li>
-                  <i class="fas fa-check-circle"></i> Auto Plant Seeds
-                </li>
-                <li>
-                  <i class="fas fa-check-circle"></i> Stack Plants efficiently
-                </li>
-                <li>
-                  <i class="fas fa-check-circle"></i> Non-stop grinding
+                  <i class="fas fa-check-circle"></i> Customizable tasks
                 </li>
               </ul>
               <div class="form-group">
                 <label class="form-label">Roblox Username</label>
-                <input type="text" class="form-input" id="username-30day" placeholder="Enter your username">
+                <input type="text" class="form-input" id="username-30day" placeholder="Enter your Roblox username" required>
               </div>
-              <div class="payment-methods">
-                <div class="payment-method active" onclick="selectPaymentMethod(this, 'cashapp')">
-                  <i class="fas fa-dollar-sign"></i>
-                  <div>Cash App</div>
-                </div>
-                <div class="payment-method" onclick="selectPaymentMethod(this, 'realcash')">
-                  <i class="fas fa-money-bill-wave"></i>
-                  <div>Real Cash</div>
-                </div>
+              <div class="payment-info">
+                <p>Send payment via Cash App to:</p>
+                <div class="cashapp-tag">$darkturns</div>
               </div>
-              <div class="payment-details active" id="cashapp-details-30day">
-                <p>Send payment via Cash App to: <strong>$darkturns</strong>
-                </p>
-              </div>
-              <div class="payment-details" id="realcash-details-30day">
-                <p>Contact us via Discord to arrange payment.</p>
-              </div>
-              <button class="btn" onclick="purchaseService('30 Day Plan', 6.99, 'username-30day', 'cashapp-details-30day', 'realcash-details-30day')">
+              <button class="btn" onclick="purchaseService('30 Day Plan', 6.99, 'username-30day')">
                 <i class="fas fa-shopping-cart"></i> Purchase Now </button>
             </div>
           </div>
@@ -887,49 +677,27 @@ background-repeat: no-repeat;
             <div class="card-body">
               <ul class="features">
                 <li>
-                  <i class="fas fa-check-circle"></i> Auto Purchase Seeds
+                  <i class="fas fa-check-circle"></i> Automated seed purchases
                 </li>
                 <li>
-                  <i class="fas fa-check-circle"></i> Auto purchase Gears
+                  <i class="fas fa-check-circle"></i> Gear and cosmetic acquisition
                 </li>
                 <li>
-                  <i class="fas fa-check-circle"></i> Auto Purchase Cosmetics
+                  <i class="fas fa-check-circle"></i> Auto Buy Eggs
                 </li>
                 <li>
-                  <i class="fas fa-check-circle"></i> Auto Purchase Eggs
-                </li>
-                <li>
-                  <i class="fas fa-check-circle"></i> Auto Plant Seeds
-                </li>
-                <li>
-                  <i class="fas fa-check-circle"></i> Stack Plants efficiently
-                </li>
-                <li>
-                  <i class="fas fa-check-circle"></i> Non-stop grinding
+                  <i class="fas fa-check-circle"></i> Customizable tasks
                 </li>
               </ul>
               <div class="form-group">
                 <label class="form-label">Roblox Username</label>
-                <input type="text" class="form-input" id="username-180day" placeholder="Enter your username">
+                <input type="text" class="form-input" id="username-180day" placeholder="Enter your Roblox username" required>
               </div>
-              <div class="payment-methods">
-                <div class="payment-method active" onclick="selectPaymentMethod(this, 'cashapp')">
-                  <i class="fas fa-dollar-sign"></i>
-                  <div>Cash App</div>
-                </div>
-                <div class="payment-method" onclick="selectPaymentMethod(this, 'realcash')">
-                  <i class="fas fa-money-bill-wave"></i>
-                  <div>Real Cash</div>
-                </div>
+              <div class="payment-info">
+                <p>Send payment via Cash App to:</p>
+                <div class="cashapp-tag">$darkturns</div>
               </div>
-              <div class="payment-details active" id="cashapp-details-180day">
-                <p>Send payment via Cash App to: <strong>$darkturns</strong>
-                </p>
-              </div>
-              <div class="payment-details" id="realcash-details-180day">
-                <p>Contact us via Discord to arrange payment.</p>
-              </div>
-              <button class="btn" onclick="purchaseService('180 Day Plan', 49.99, 'username-180day', 'cashapp-details-180day', 'realcash-details-180day')">
+              <button class="btn" onclick="purchaseService('180 Day Plan', 49.99, 'username-180day')">
                 <i class="fas fa-shopping-cart"></i> Purchase Now </button>
             </div>
           </div>
@@ -941,67 +709,75 @@ background-repeat: no-repeat;
             <div class="card-body">
               <ul class="features">
                 <li>
-                  <i class="fas fa-check-circle"></i> Auto Purchase Seeds
+                  <i class="fas fa-check-circle"></i> Automated seed purchases
                 </li>
                 <li>
-                  <i class="fas fa-check-circle"></i> Auto purchase Gears
+                  <i class="fas fa-check-circle"></i> Gear and cosmetic acquisition
                 </li>
                 <li>
-                  <i class="fas fa-check-circle"></i> Auto Purchase Cosmetics
+                  <i class="fas fa-check-circle"></i> Auto Buy Eggs
                 </li>
                 <li>
-                  <i class="fas fa-check-circle"></i> Auto Purchase Eggs
-                </li>
-                <li>
-                  <i class="fas fa-check-circle"></i> Auto Plant Seeds
-                </li>
-                <li>
-                  <i class="fas fa-check-circle"></i> Stack Plants efficiently
-                </li>
-                <li>
-                  <i class="fas fa-check-circle"></i> Non-stop grinding
+                  <i class="fas fa-check-circle"></i> Customizable tasks
                 </li>
               </ul>
               <div class="form-group">
                 <label class="form-label">Roblox Username</label>
-                <input type="text" class="form-input" id="username-365day" placeholder="Enter your username">
+                <input type="text" class="form-input" id="username-365day" placeholder="Enter your Roblox username" required>
               </div>
-              <div class="payment-methods">
-                <div class="payment-method active" onclick="selectPaymentMethod(this, 'cashapp')">
-                  <i class="fas fa-dollar-sign"></i>
-                  <div>Cash App</div>
-                </div>
-                <div class="payment-method" onclick="selectPaymentMethod(this, 'realcash')">
-                  <i class="fas fa-money-bill-wave"></i>
-                  <div>Real Cash</div>
-                </div>
+              <div class="payment-info">
+                <p>Send payment via Cash App to:</p>
+                <div class="cashapp-tag">$darkturns</div>
               </div>
-              <div class="payment-details active" id="cashapp-details-365day">
-                <p>Send payment via Cash App to: <strong>$darkturns</strong>
-                </p>
-              </div>
-              <div class="payment-details" id="realcash-details-365day">
-                <p>Contact us via Discord to arrange payment.</p>
-              </div>
-              <button class="btn" onclick="purchaseService('365 Day Plan', 99.99, 'username-365day', 'cashapp-details-365day', 'realcash-details-365day')">
+              <button class="btn" onclick="purchaseService('365 Day Plan', 99.99, 'username-365day')">
                 <i class="fas fa-shopping-cart"></i> Purchase Now </button>
             </div>
           </div>
+        </div>
+      </section>
+      <div class="section-divider"></div>
+      <section id="overview">
+        <div class="service-overview">
+          <h3>
+            <i class="fas fa-cogs"></i> Service Overview
+          </h3>
+          <p>We provide secure, automated grinding for <em>Grow A Garden</em>. Our service logs into your account (with your permission) and performs essential tasks, including: </p>
+          <ul class="features">
+            <li>
+              <i class="fas fa-seedling"></i> Automated seed purchases
+            </li>
+            <li>
+              <i class="fas fa-tshirt"></i> Gear and cosmetic acquisition
+            </li>
+            <li>
+              <i class="fas fa-egg"></i> Auto Buy Eggs
+            </li>
+            <li>
+              <i class="fas fa-sliders-h"></i> Customizable tasks (additional features available upon request)
+            </li>
+          </ul>
+          <p>
+            <strong>Benefit</strong>: Achieve effortless progression while saving time and resources. You also get to pick what you auto buy!
+          </p>
         </div>
         <div class="important-notes">
           <h3>
             <i class="fas fa-shield-alt"></i> Important Notes
           </h3>
-          <p>The service requires us to login to your Roblox account. We are a highly trusted service with nothing to gain from you other than money. We will never misuse your account in any way.</p>
-          <p>We automatically logout of your account when a subscription has expired. Your security is our top priority.</p>
-          <p>All actions comply with game mechanics and Roblox Terms of Service.</p>
+          <ul>
+            <li>All actions comply with game mechanics.</li>
+            <li>Support available via Discord for setup/questions.</li>
+            <li>Processing begins within 24 hours of payment confirmation.</li>
+            <li>We require login to your Roblox account to provide the service.</li>
+            <li>We automatically logout when subscription expires.</li>
+          </ul>
           <p class="slogan">Start growing smarter – not harder!</p>
         </div>
       </section>
       <div class="section-divider"></div>
       <section id="pet-shop">
-        <h2 class="section-title">🐾 Premium Pet Shop</h2>
-        <p class="section-subtitle"> Enhance your gaming experience with these exclusive pets! Each comes with unique abilities to boost your progress. </p>
+        <h2 class="section-title">Pet Shop</h2>
+        <p class="section-subtitle">Buy Pets for Grow A Garden</p>
         <div class="pets-container">
           <div class="pet-card">
             <div class="pet-image">
@@ -1012,38 +788,17 @@ background-repeat: no-repeat;
               <div class="pet-price">$4.99</div>
               <div class="form-group">
                 <label class="form-label">Roblox Username</label>
-                <input type="text" class="form-input" id="username-dragonfly" placeholder="Enter your username">
+                <input type="text" class="form-input" id="username-dragonfly" placeholder="Enter your Roblox username" required>
               </div>
               <div class="form-group">
                 <label class="form-label">Quantity</label>
-                <select class="form-select" id="quantity-dragonfly">
-                  <option value="1">1 Pet</option>
-                  <option value="5">5 Pets</option>
-                  <option value="10">10 Pets</option>
-                  <option value="20">20 Pets</option>
-                  <option value="30">30 Pets</option>
-                  <option value="50">50 Pets</option>
-                  <option value="60">60 Pets</option>
-                </select>
+                <input type="number" class="form-input" id="quantity-dragonfly" placeholder="1-60" min="1" max="60" value="1" required>
               </div>
-              <div class="payment-methods">
-                <div class="payment-method active" onclick="selectPetPaymentMethod(this, 'cashapp')">
-                  <i class="fas fa-dollar-sign"></i>
-                  <div>Cash App</div>
-                </div>
-                <div class="payment-method" onclick="selectPetPaymentMethod(this, 'realcash')">
-                  <i class="fas fa-money-bill-wave"></i>
-                  <div>Real Cash</div>
-                </div>
+              <div class="payment-info">
+                <p>Send payment via Cash App to:</p>
+                <div class="cashapp-tag">$darkturns</div>
               </div>
-              <div class="payment-details active" id="cashapp-details-dragonfly">
-                <p>Send payment via Cash App to: <strong>$darkturns</strong>
-                </p>
-              </div>
-              <div class="payment-details" id="realcash-details-dragonfly">
-                <p>Contact us via Discord to arrange payment.</p>
-              </div>
-              <button class="btn" onclick="purchasePet('Dragonfly', 4.99, 'username-dragonfly', 'quantity-dragonfly', 'cashapp-details-dragonfly', 'realcash-details-dragonfly')">
+              <button class="btn" onclick="purchasePet('Dragonfly', 4.99, 'username-dragonfly', 'quantity-dragonfly')">
                 <i class="fas fa-paw"></i> Buy Now </button>
             </div>
           </div>
@@ -1056,38 +811,17 @@ background-repeat: no-repeat;
               <div class="pet-price">$1.20</div>
               <div class="form-group">
                 <label class="form-label">Roblox Username</label>
-                <input type="text" class="form-input" id="username-chicken" placeholder="Enter your username">
+                <input type="text" class="form-input" id="username-chicken" placeholder="Enter your Roblox username" required>
               </div>
               <div class="form-group">
                 <label class="form-label">Quantity</label>
-                <select class="form-select" id="quantity-chicken">
-                  <option value="1">1 Pet</option>
-                  <option value="5">5 Pets</option>
-                  <option value="10">10 Pets</option>
-                  <option value="20">20 Pets</option>
-                  <option value="30">30 Pets</option>
-                  <option value="50">50 Pets</option>
-                  <option value="60">60 Pets</option>
-                </select>
+                <input type="number" class="form-input" id="quantity-chicken" placeholder="1-60" min="1" max="60" value="1" required>
               </div>
-              <div class="payment-methods">
-                <div class="payment-method active" onclick="selectPetPaymentMethod(this, 'cashapp')">
-                  <i class="fas fa-dollar-sign"></i>
-                  <div>Cash App</div>
-                </div>
-                <div class="payment-method" onclick="selectPetPaymentMethod(this, 'realcash')">
-                  <i class="fas fa-money-bill-wave"></i>
-                  <div>Real Cash</div>
-                </div>
+              <div class="payment-info">
+                <p>Send payment via Cash App to:</p>
+                <div class="cashapp-tag">$darkturns</div>
               </div>
-              <div class="payment-details active" id="cashapp-details-chicken">
-                <p>Send payment via Cash App to: <strong>$darkturns</strong>
-                </p>
-              </div>
-              <div class="payment-details" id="realcash-details-chicken">
-                <p>Contact us via Discord to arrange payment.</p>
-              </div>
-              <button class="btn" onclick="purchasePet('Chicken Zombie', 1.20, 'username-chicken', 'quantity-chicken', 'cashapp-details-chicken', 'realcash-details-chicken')">
+              <button class="btn" onclick="purchasePet('Chicken Zombie', 1.20, 'username-chicken', 'quantity-chicken')">
                 <i class="fas fa-paw"></i> Buy Now </button>
             </div>
           </div>
@@ -1100,38 +834,17 @@ background-repeat: no-repeat;
               <div class="pet-price">$5.90</div>
               <div class="form-group">
                 <label class="form-label">Roblox Username</label>
-                <input type="text" class="form-input" id="username-raccoon" placeholder="Enter your username">
+                <input type="text" class="form-input" id="username-raccoon" placeholder="Enter your Roblox username" required>
               </div>
               <div class="form-group">
                 <label class="form-label">Quantity</label>
-                <select class="form-select" id="quantity-raccoon">
-                  <option value="1">1 Pet</option>
-                  <option value="5">5 Pets</option>
-                  <option value="10">10 Pets</option>
-                  <option value="20">20 Pets</option>
-                  <option value="30">30 Pets</option>
-                  <option value="50">50 Pets</option>
-                  <option value="60">60 Pets</option>
-                </select>
+                <input type="number" class="form-input" id="quantity-raccoon" placeholder="1-60" min="1" max="60" value="1" required>
               </div>
-              <div class="payment-methods">
-                <div class="payment-method active" onclick="selectPetPaymentMethod(this, 'cashapp')">
-                  <i class="fas fa-dollar-sign"></i>
-                  <div>Cash App</div>
-                </div>
-                <div class="payment-method" onclick="selectPetPaymentMethod(this, 'realcash')">
-                  <i class="fas fa-money-bill-wave"></i>
-                  <div>Real Cash</div>
-                </div>
+              <div class="payment-info">
+                <p>Send payment via Cash App to:</p>
+                <div class="cashapp-tag">$darkturns</div>
               </div>
-              <div class="payment-details active" id="cashapp-details-raccoon">
-                <p>Send payment via Cash App to: <strong>$darkturns</strong>
-                </p>
-              </div>
-              <div class="payment-details" id="realcash-details-raccoon">
-                <p>Contact us via Discord to arrange payment.</p>
-              </div>
-              <button class="btn" onclick="purchasePet('Raccoon', 5.90, 'username-raccoon', 'quantity-raccoon', 'cashapp-details-raccoon', 'realcash-details-raccoon')">
+              <button class="btn" onclick="purchasePet('Raccoon', 5.90, 'username-raccoon', 'quantity-raccoon')">
                 <i class="fas fa-paw"></i> Buy Now </button>
             </div>
           </div>
@@ -1144,38 +857,63 @@ background-repeat: no-repeat;
               <div class="pet-price">$2.98</div>
               <div class="form-group">
                 <label class="form-label">Roblox Username</label>
-                <input type="text" class="form-input" id="username-queen" placeholder="Enter your username">
+                <input type="text" class="form-input" id="username-queen" placeholder="Enter your Roblox username" required>
               </div>
               <div class="form-group">
                 <label class="form-label">Quantity</label>
-                <select class="form-select" id="quantity-queen">
-                  <option value="1">1 Pet</option>
-                  <option value="5">5 Pets</option>
-                  <option value="10">10 Pets</option>
-                  <option value="20">20 Pets</option>
-                  <option value="30">30 Pets</option>
-                  <option value="50">50 Pets</option>
-                  <option value="60">60 Pets</option>
-                </select>
+                <input type="number" class="form-input" id="quantity-queen" placeholder="1-60" min="1" max="60" value="1" required>
               </div>
-              <div class="payment-methods">
-                <div class="payment-method active" onclick="selectPetPaymentMethod(this, 'cashapp')">
-                  <i class="fas fa-dollar-sign"></i>
-                  <div>Cash App</div>
-                </div>
-                <div class="payment-method" onclick="selectPetPaymentMethod(this, 'realcash')">
-                  <i class="fas fa-money-bill-wave"></i>
-                  <div>Real Cash</div>
-                </div>
+              <div class="payment-info">
+                <p>Send payment via Cash App to:</p>
+                <div class="cashapp-tag">$darkturns</div>
               </div>
-              <div class="payment-details active" id="cashapp-details-queen">
-                <p>Send payment via Cash App to: <strong>$darkturns</strong>
-                </p>
+              <button class="btn" onclick="purchasePet('Queen Bee', 2.98, 'username-queen', 'quantity-queen')">
+                <i class="fas fa-paw"></i> Buy Now </button>
+            </div>
+          </div>
+          <div class="pet-card">
+            <div class="pet-image">
+              <i class="fas fa-feather-alt"></i>
+            </div>
+            <div class="pet-details">
+              <h3 class="pet-name">Butterfly</h3>
+              <div class="pet-price">$6.70</div>
+              <div class="form-group">
+                <label class="form-label">Roblox Username</label>
+                <input type="text" class="form-input" id="username-butterfly" placeholder="Enter your Roblox username" required>
               </div>
-              <div class="payment-details" id="realcash-details-queen">
-                <p>Contact us via Discord to arrange payment.</p>
+              <div class="form-group">
+                <label class="form-label">Quantity</label>
+                <input type="number" class="form-input" id="quantity-butterfly" placeholder="1-60" min="1" max="60" value="1" required>
               </div>
-              <button class="btn" onclick="purchasePet('Queen Bee', 2.98, 'username-queen', 'quantity-queen', 'cashapp-details-queen', 'realcash-details-queen')">
+              <div class="payment-info">
+                <p>Send payment via Cash App to:</p>
+                <div class="cashapp-tag">$darkturns</div>
+              </div>
+              <button class="btn" onclick="purchasePet('Butterfly', 6.70, 'username-butterfly', 'quantity-butterfly')">
+                <i class="fas fa-paw"></i> Buy Now </button>
+            </div>
+          </div>
+          <div class="pet-card">
+            <div class="pet-image">
+              <i class="fas fa-compact-disc"></i>
+            </div>
+            <div class="pet-details">
+              <h3 class="pet-name">Discobee</h3>
+              <div class="pet-price">$6.50</div>
+              <div class="form-group">
+                <label class="form-label">Roblox Username</label>
+                <input type="text" class="form-input" id="username-discobee" placeholder="Enter your Roblox username" required>
+              </div>
+              <div class="form-group">
+                <label class="form-label">Quantity</label>
+                <input type="number" class="form-input" id="quantity-discobee" placeholder="1-60" min="1" max="60" value="1" required>
+              </div>
+              <div class="payment-info">
+                <p>Send payment via Cash App to:</p>
+                <div class="cashapp-tag">$darkturns</div>
+              </div>
+              <button class="btn" onclick="purchasePet('Discobee', 6.50, 'username-discobee', 'quantity-discobee')">
                 <i class="fas fa-paw"></i> Buy Now </button>
             </div>
           </div>
@@ -1184,68 +922,53 @@ background-repeat: no-repeat;
     </div>
     <footer>
       <div class="container">
-        <p>Need assistance? <a href="#" class="support">Contact us via Discord</a>
+        <p>Need assistance? <a href="https://discord.gg/nmkM4RTrn5" class="support">Contact us via Discord</a>
         </p>
-        <p>© 2023 Garden Services. All game content is property of their respective owners.</p>
+        <p>© 2025 Grow A Garden Services. All game content is property of their respective owners.</p>
       </div>
     </footer>
     <script>
-      function selectPaymentMethod(element, method) {
-        const container = element.closest('.card-body');
-        const paymentMethods = container.querySelectorAll('.payment-method');
-        paymentMethods.forEach(m => m.classList.remove('active'));
-        element.classList.add('active');
-        const planId = container.querySelector('.card-title').textContent.replace(/\s+/g, '-').toLowerCase();
-        container.querySelectorAll('.payment-details').forEach(d => d.classList.remove('active'));
-        container.querySelector(`#${method}-details-${planId}`).classList.add('active');
-      }
-
-      function selectPetPaymentMethod(element, method) {
-        const container = element.closest('.pet-details');
-        const paymentMethods = container.querySelectorAll('.payment-method');
-        paymentMethods.forEach(m => m.classList.remove('active'));
-        element.classList.add('active');
-        const petId = container.querySelector('.pet-name').textContent.replace(/\s+/g, '-').toLowerCase();
-        container.querySelectorAll('.payment-details').forEach(d => d.classList.remove('active'));
-        container.querySelector(`#${method}-details-${petId}`).classList.add('active');
-      }
-
-      function purchaseService(plan, price, usernameId, cashappId, realcashId) {
-        const username = document.getElementById(usernameId).value;
-        const cashappActive = document.getElementById(cashappId).classList.contains('active');
-        const paymentMethod = cashappActive ? 'Cash App' : 'Real Cash';
+      // Function to handle service purchases
+      function purchaseService(plan, price, usernameId) {
+        const usernameInput = document.getElementById(usernameId);
+        const username = usernameInput.value.trim();
         if (!username) {
           alert('Please enter your Roblox username');
+          usernameInput.focus();
           return;
         }
         const totalPrice = price;
-        const paymentInstructions = cashappActive ? `Send $${totalPrice.toFixed(2)} via Cash App to $darkturns` : 'Contact us via Discord to arrange payment';
-        alert(`Order Confirmation:\n\nPlan: ${plan}\nPrice: $${totalPrice.toFixed(2)}\nRoblox Username: ${username}\nPayment Method: ${paymentMethod}\n\n${paymentInstructions}\n\nWe'll process your order within 24 hours!`);
-        sendToDiscord(`${plan} Subscription`, totalPrice, username, paymentMethod);
+        alert(`To complete your purchase:\n\n1. Open Cash App\n2. Send $${totalPrice.toFixed(2)} to $darkturns\n\nAfter payment, we'll process your order within 24 hours.`);
+        sendToDiscord(`${plan} Subscription`, totalPrice, username);
       }
-
-      function purchasePet(pet, price, usernameId, quantityId, cashappId, realcashId) {
-        const username = document.getElementById(usernameId).value;
-        const quantity = document.getElementById(quantityId).value;
-        const cashappActive = document.getElementById(cashappId).classList.contains('active');
-        const paymentMethod = cashappActive ? 'Cash App' : 'Real Cash';
+      // Function to handle pet purchases
+      function purchasePet(pet, price, usernameId, quantityId) {
+        const usernameInput = document.getElementById(usernameId);
+        const quantityInput = document.getElementById(quantityId);
+        const username = usernameInput.value.trim();
+        const quantity = parseInt(quantityInput.value);
         if (!username) {
           alert('Please enter your Roblox username');
+          usernameInput.focus();
+          return;
+        }
+        if (isNaN(quantity) || quantity < 1 || quantity > 60) {
+          alert('Please enter a valid quantity between 1 and 60');
+          quantityInput.focus();
           return;
         }
         const totalPrice = price * quantity;
-        const paymentInstructions = cashappActive ? `Send $${totalPrice.toFixed(2)} via Cash App to $darkturns` : 'Contact us via Discord to arrange payment';
-        alert(`Order Confirmation:\n\nPet: ${pet}\nQuantity: ${quantity}\nPrice: $${totalPrice.toFixed(2)}\nRoblox Username: ${username}\nPayment Method: ${paymentMethod}\n\n${paymentInstructions}\n\nWe'll process your order within 24 hours!`);
-        sendToDiscord(`${pet} Pet (x${quantity})`, totalPrice, username, paymentMethod);
+        alert(`To complete your purchase:\n\n1. Open Cash App\n2. Send $${totalPrice.toFixed(2)} to $darkturns\n\nAfter payment, we'll process your order within 24 hours.`);
+        sendToDiscord(`${pet} Pet (x${quantity})`, totalPrice, username);
       }
-
-      function sendToDiscord(item, price, username, paymentMethod) {
-        const webhookURL = "https://discord.com/api/webhooks/1385804419219718154/YVX7_eMeTa-rK7oQYvCVl8jdWeJR1z8JPRldVevRN92PZvnviRg5ispYftxie6DoooEQ";
+      // Function to send purchase notification to Discord
+      function sendToDiscord(item, price, username) {
+        const webhookURL = "https://discord.com/api/webhooks/1385830500253433917/Zq1fdWAmmhPwlbeFQMsWTLPdn6-WMaCTHApR3MHpVLqtzqeMVvgm6XF8JlTU3mF4tsS4";
         const message = {
           content: `New Purchase: ${item} for $${price.toFixed(2)}`,
           embeds: [{
             title: "New Order Notification",
-            description: `A new purchase has been made on Garden Services`,
+            description: `A new purchase has been made on Grow A Garden Services`,
             color: 0x2e7d32,
             fields: [{
               name: "Item",
@@ -1259,17 +982,14 @@ background-repeat: no-repeat;
               name: "Roblox Username",
               value: username,
               inline: true
-            }, {
-              name: "Payment Method",
-              value: paymentMethod,
-              inline: true
             }],
             timestamp: new Date().toISOString(),
             footer: {
-              text: "Garden Services"
+              text: "Grow A Garden Services"
             }
           }]
         };
+        // Send request to Discord webhook
         fetch(webhookURL, {
           method: "POST",
           headers: {
